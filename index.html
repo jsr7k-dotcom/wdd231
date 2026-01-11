@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="José Roberto Hernández Peña">
+    <meta name="description" content="WDD231 First Project">
+    <title>WDD231 Home Page | José Roberto Hernández Peña</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script defer src="scripts/courses.js"></script>
+    <script defer src="scripts/dates.js"></script>
+    <script defer src="scripts/navigation.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/rocket.svg" alt="logo" width="35" height="35"></a>
+                <span>José Roberto Hernández Peña</span>
+            </div>
+            <button aria-label="Menu" id="menu"></button>
+            <div class="bar">
+                <a href="index.html" class="active">Home</a>
+                <a href="#">Chamber Project</a>
+                <a href="#">Final Project</a>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        <div class="flex-contain">
+
+            <section class="life">
+                <h2>About Me</h2>
+                <p>My name is Roberto Hernandez. I'm originally from Mexico City but am currently living here in Querétaro.
+
+                By profession, I am a Data Analyst for a global nutrition company, where I enjoy diving into complex
+                datasets to uncover
+                business insights. A good example of my work is a recent project where I developed a call volume
+                forecast for a large
+                call centre. This involved reviewing a detailed, three-year dataset—broken down into 30-minute intervals
+                across multiple
+                languages and agent skills—to accurately predict future trends. I primarily work within the Microsoft
+                ecosystem to build
+                practical, enterprise-level solutions.
+
+                Outside of my professional life, I like to maintain a healthy balance. I'm an avid runner, I enjoy
+                exploring my creative
+                side through cooking, and I always have some music on in the background.</p>
+            </section>
+
+            <section class="face">
+                <h2>Student Photo</h2>
+                <img src="images/profile.jpg" alt="Student's Photo" width="300" height="400">
+            </section>
+        </div>
+
+        <section class="certs">
+            <h2>Web & Computer Programming Certificate Courses</h2>
+            <div class="course-buttons">
+                <button id="all">
+                    All
+                </button>
+                <button id="wdd">
+                    WDD
+                </button>
+                <button id="cse">
+                    CSE
+                </button>
+            </div>
+            <ol id="course-cert"></ol>
+            <p id="course-listed"></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="socialmedia">
+            <a href="https://www.x.com">
+                <img src="images/x-twitter-logo.svg" alt="Twitter/X" width="120" height="120">
+            </a>
+            <a href="https://www.github.com">
+                <img src="images/github-logo.svg" alt="GitHub" width="120" height="120">
+            </a>
+            <a href="https://www.linkedin.com">
+                <img src="images/linkdin-logo.svg" alt="Linkedin" width="120" height="120">
+            </a>
+        </div>
+        <p><span id="currentYear"></span>, José Roberto Hernández Peña | Querétaro, México </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

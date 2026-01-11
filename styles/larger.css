@@ -1,0 +1,85 @@
+@media (min-width: 1000px) {
+
+    /*Class Rules Below*/
+    .bar {
+        display: flex;
+        flex-direction: row;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: black;
+        color: white;
+    }
+
+    .bar a:hover {
+        background-color: grey;
+    }
+
+    .flex-contain {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .life {
+        width: 70%;
+        margin-right: 15px;
+
+    }
+
+    .life p {
+        margin-left: 10px;
+    }
+
+    .face {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+
+    .course-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .course-buttons button {
+        background-color: orange;
+        color: black;
+        border-radius: 15px;
+        width: 30%;
+        height: 50px;
+        font-size: large;
+        justify-content: space-around;
+    }
+
+    #course-cert {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+
+    #course-cert li {
+        background-color: orange;
+        color: black;
+        border-radius: 15px;
+        height: 50px;
+        width: 30%;
+        font-size: large;
+        align-content: center;
+    }
+
+    /*End of Class Rules*/
+
+    /*Start of ID Rules*/
+
+    #menu {
+        display: none;
+    }
+
+    /*End of ID Rules*/
+
+}
