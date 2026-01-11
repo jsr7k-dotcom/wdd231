@@ -45,7 +45,7 @@
     }
 
     .course-buttons button {
-        background-color: orange;
+        background-color: teal;
         color: black;
         border-radius: 15px;
         width: 30%;
@@ -63,7 +63,7 @@
 
 
     #course-cert li {
-        background-color: orange;
+        background-color: teal;
         color: black;
         border-radius: 15px;
         height: 50px;

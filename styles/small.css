@@ -125,7 +125,7 @@ footer {
 }
 
 .course-buttons button {
-    background-color: orange;
+    background-color: teal;
     color: black;
     border-radius: 15px;
     width: 100%;
@@ -151,7 +151,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: orange;
+    background-color: teal;
     color: black;
     border-radius: 15px;
     width: 100%;
