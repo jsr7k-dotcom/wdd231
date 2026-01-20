@@ -1,0 +1,63 @@
+:root{
+    --card-color: rgb(210, 215, 237);
+    --text-color: rgb(85, 72, 167);
+    --bg-color: rgb(241, 246, 243);
+}
+
+body{
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--bg-color);
+}
+
+main{
+    padding: 1rem;
+    background-color: rgb(223, 226, 226);
+}
+
+#cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.5rem;
+}
+
+header{
+    margin-bottom: 0.5rem;
+
+}
+
+header h1{
+    text-align: center;
+    color: var(--text-color);
+    margin: 0;
+    padding: 1rem;
+}
+
+section{
+    border: 2px solid var(--text-color);
+    padding: 1rem;
+    background-color: var(--card-color);
+    box-shadow: 0 5px 10px  rgb(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+section h2{
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+section p{
+    font-weight: 500;
+}
+
+section img{
+    margin-top: 1rem;
+    max-width: 100%;
+    height: auto;
+}
+
+footer{
+    text-align: center;
+    padding: 1rem;
+    font-weight: 600;
+}
