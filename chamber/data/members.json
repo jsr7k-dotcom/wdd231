@@ -1,0 +1,76 @@
+{
+    "companies": [
+        {
+            "company_name": "Aernnova Aerospace Mexico",
+            "company_address": "Av. del Ferrocarril 141, Parque Industrial Querétaro, 76220 Santa Rosa Jáuregui, Qro., Mexico",
+            "phone_number": "+52 442 227 2850",
+            "website_url": "https://www.aernnova.com",
+            "image_file": "aernnova_aerospace_logo.png",
+            "membership_level": 3
+        },
+        {
+            "company_name": "BRP Querétaro",
+            "company_address": "Av. Ferrocarril 202, Parque Industrial Querétaro, 76220 Santa Rosa Jáuregui, Qro., Mexico",
+            "phone_number": "+52 442 256 4000",
+            "website_url": "https://www.brp.com",
+            "image_file": "brp_queretaro_logo.png",
+            "membership_level": 3
+        },
+        {
+            "company_name": "Harman Becker Automotive Systems",
+            "company_address": "Av. Industria Minera 502, Parque Industrial Querétaro, 76220 Santa Rosa Jáuregui, Qro., Mexico",
+            "phone_number": "+52 442 238 2100",
+            "website_url": "https://www.harman.com",
+            "image_file": "harman_becker_logo.svg",
+            "membership_level": 2
+        },
+        {
+            "company_name": "RONAL Querétaro",
+            "company_address": "Av. San Pedrito 108, Parque Industrial Querétaro, 76215 Santa Rosa Jáuregui, Qro., Mexico",
+            "phone_number": "+52 442 238 9300",
+            "website_url": "https://www.ronalgroup.com",
+            "image_file": "ronal_logo.png",
+            "membership_level": 1
+        },
+        {
+            "company_name": "Hitachi Astemo México",
+            "company_address": "Av. Manufactura 501, Parque Industrial Querétaro, 76220 Santa Rosa Jáuregui, Qro., Mexico",
+            "phone_number": "+52 442 500 2100",
+            "website_url": "https://www.hitachiastemo.com",
+            "image_file": "logo_astemo.png",
+            "membership_level": 2
+        },
+        {
+            "company_name": "BTicino de México",
+            "company_address": "Carretera 57 Km. 22.7, Parque Industrial Querétaro, 76220 Santa Rosa Jáuregui, Qro., Mexico",
+            "phone_number": "+52 442 238 0400",
+            "website_url": "https://www.bticino.com.mx",
+            "image_file": "bticino-logo.svg",
+            "membership_level": 1
+        },
+        {
+            "company_name": "Nucitec",
+            "company_address": "Av. Jurica 116, Parque Industrial Querétaro, 76220 Santa Rosa Jáuregui, Qro., Mexico",
+            "phone_number": "+52 442 240 9496",
+            "website_url": "https://www.nucitec.com",
+            "image_file": "logo-nucitec.png",
+            "membership_level": 2
+        },
+        {
+            "company_name": "Schneider Electric México",
+            "company_address": "Blvd. Bernardo Quintana 512, Arboledas, 76140 Santiago de Querétaro, Qro., Mexico",
+            "phone_number": "+52 442 214 1259",
+            "website_url": "https://www.se.com/mx",
+            "image_file": "schneider_electric_logo.png",
+            "membership_level": 3
+        },
+        {
+            "company_name": "Eaton Technologies",
+            "company_address": "Av. La Montaña 128, Parque Industrial Querétaro, 76220 Santa Rosa Jáuregui, Qro., Mexico",
+            "phone_number": "+52 442 229 4900",
+            "website_url": "https://www.eaton.com",
+            "image_file": "eaton-logo.png",
+            "membership_level": 1
+        }
+    ]
+}

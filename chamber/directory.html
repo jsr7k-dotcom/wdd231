@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 | Directory</title>
+    <meta name="description"
+        content="WDD 231 | José Roberto Hernández Peña | Directory page for Chamber of Commerce in Querétaro, México">
+    <meta name="author" content="José Roberto Hernández Peña">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Querétaro Chamber of Commerce Directory">
+    <meta property="og:description"
+        content="Explore the Querétaro Chamber of Commerce directory, showcasing local businesses and services in Santiago de Querétaro, México.">
+    <meta property="og:image" content="">
+    <meta property="og:image:width" content="340">
+    <meta property="og:image:height" content="329">
+    <meta property="og:url" content="">
+    <link rel="icon" href="images/favicon-qro.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/queretaro-chamber-logo.png" alt="Querétaro Chamber of Commerce" width="512" height="512">
+        <span>Querétaro Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-btn" class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Directory</h1>
+        <div class="view-buttons">
+            <button id="gridBtn">Grid</button>
+            <button id="listBtn">List</button>
+        </div>
+        <div id="cards" class="grid"></div>
+    </main>
+    <footer>
+        <div>
+            <h2>Querétaro Chamber of Commerce</h2>
+            <p>Av. Luis Vega Monroy 405</p>
+            <p>Quinta Balaustradas</p>
+            <p>Querétaro, Qro. C.P. 76079</p>
+            <p>jhernandezpea@byupathway.edu</p>
+            <p>123-456-7890</p>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg"
+                    alt="Facebook" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img
+                    src="images/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
+            <a href="https://github.com/" target="_blank"><img src="images/github.svg" alt="GitHub" width="16"
+                    height="16"></a>
+        </div>
+        <div>
+            <p>WDD 231</p>
+            <p>José Roberto Hernández Peña</p>
+            <p>© <span id="currentyear"></span> Querétaro Chamber of Commerce</p>
+            <p id="lastmodified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
