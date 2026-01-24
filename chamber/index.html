@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Querétaro Chamber of Commerce</title>
+    <meta name="description"
+        content="WDD 231 | José Roberto Hernández Peña | Home page for Chamber of Commerce in Querétaro, México">
+    <meta name="author" content="José Roberto Hernández Peña">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Querétaro Chamber of Commerce Home Page">
+    <meta property="og:description"
+        content="Explore the Querétaro Chamber of Commerce directory, showcasing local businesses and services in Santiago de Querétaro, México.">
+    <meta property="og:image" content="https://jsr7k-dotcom.github.io/wdd231/chamber/images/queretaro-chamber-logo.png">
+    <meta property="og:image:width" content="340">
+    <meta property="og:image:height" content="329">
+    <meta property="og:url" content="https://jsr7k-dotcom.github.io/wdd231/chamber/directory.html">
+    <link rel="icon" href="images/favicon-qro.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/forecast.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/queretaro-chamber-logo.png" alt="Querétaro Chamber of Commerce" width="512" height="512">
+        <span>Querétaro Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-btn" class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-small.jpg" media="(max-width: 600px)">
+                <img src="images/hero-large.jpg" alt="Queretaro City Aqueduct">
+            </picture>
+
+            <div class="hero-content">
+                <h2>Welcome to the Querétaro Chamber of Commerce</h2>
+                <p>Connecting local businesses with the future</p>
+                <a href="#" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <section class="current-events">
+            <h2>Current Events</h2>
+
+            <article class="event-card">
+                <h3>Conference: Digital Innovation</h3>
+                <p class="event-date">January 24, 2026 &bull; 10:00 AM</p>
+                <p>Conference on digital innovation and its impact on local businesses.</p>
+            </article>
+
+            <article class="event-card">
+                <h3>Entrepreneurial Networking</h3>
+                <p class="event-date">February 3, 2026 &bull; 10:00 AM</p>
+                <p>Network with fellow entrepreneurs and explore new business opportunities.</p>
+            </article>
+
+            <article class="event-card">
+                <h3>Exportation Workshop</h3>
+                <p class="event-date">February 12, 2026 &bull; 6:30 PM</p>
+                <p>Practical workshop on exportation strategies and international business.</p>
+            </article>
+        </section>
+
+        <section class="weather">
+            <h2>Current Weather</h2>
+
+            <div class="weather-card">
+                <p class="weather-temp"><span id="temp"></span>&deg;C</p>
+                <p class="weather-desc" id="description"></p>
+                <img id="weather-icon" src="images/favicon.ico" alt="Weather icon">
+
+                <p class="weather-high">High: <span id="high"></span>&deg;C</p>
+                <p class="weather-low">Low: <span id="low"></span>&deg;C</p>
+
+                <p class="weather-humidity">Humidity: <span id="humidity"></span>%</p>
+
+                <p class="weather-sunrise">Sunrise: <span id="sunrise"></span></p>
+                <p class="weather-sunset">Sunset: <span id="sunset"></span></p>
+            </div>
+        </section>
+
+        <section class="forecast">
+            <h2>3-Day Forecast</h2>
+
+            <div class="forecast-grid">
+                <div class="forecast-day">
+                    <h3 id="day1-name"></h3>
+                    <p>High: <span id="day1-high"></span>&deg;C</p>
+                </div>
+
+                <div class="forecast-day">
+                    <h3 id="day2-name"></h3>
+                    <p>High: <span id="day2-high"></span>&deg;C</p>
+                </div>
+
+                <div class="forecast-day">
+                    <h3 id="day3-name"></h3>
+                    <p>High: <span id="day3-high"></span>&deg;C</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+
+            <div id="spotlight-container"></div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h2>Querétaro Chamber of Commerce</h2>
+            <p>Av. Luis Vega Monroy 405</p>
+            <p>Quinta Balaustradas</p>
+            <p>Querétaro, Qro. C.P. 76079</p>
+            <p>jhernandezpea@byupathway.edu</p>
+            <p>123-456-7890</p>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="16"
+                    height="16"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="16"
+                    height="16"></a>
+            <a href="https://github.com/" target="_blank"><img src="images/github.svg" alt="GitHub" width="16"
+                    height="16"></a>
+        </div>
+        <div>
+            <p>WDD 231</p>
+            <p>José Roberto Hernández Peña</p>
+            <p>© <span id="currentyear"></span> Querétaro Chamber of Commerce</p>
+            <p id="lastmodified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
