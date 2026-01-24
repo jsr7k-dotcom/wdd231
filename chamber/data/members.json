@@ -6,7 +6,7 @@
             "phone_number": "+52 442 227 2850",
             "website_url": "https://www.aernnova.com",
             "image_file": "aernnova_aerospace_logo.png",
-            "membership_level": 3
+            "membership_level": "Gold"
         },
         {
             "company_name": "BRP Querétaro",
@@ -14,7 +14,7 @@
             "phone_number": "+52 442 256 4000",
             "website_url": "https://www.brp.com",
             "image_file": "brp_queretaro_logo.png",
-            "membership_level": 3
+            "membership_level":"Gold"
         },
         {
             "company_name": "Harman Becker Automotive Systems",
@@ -22,7 +22,7 @@
             "phone_number": "+52 442 238 2100",
             "website_url": "https://www.harman.com",
             "image_file": "harman_becker_logo.svg",
-            "membership_level": 2
+            "membership_level": "Silver"
         },
         {
             "company_name": "RONAL Querétaro",
@@ -30,7 +30,7 @@
             "phone_number": "+52 442 238 9300",
             "website_url": "https://www.ronalgroup.com",
             "image_file": "ronal_logo.png",
-            "membership_level": 1
+            "membership_level": "Bronze"
         },
         {
             "company_name": "Hitachi Astemo México",
@@ -38,7 +38,7 @@
             "phone_number": "+52 442 500 2100",
             "website_url": "https://www.hitachiastemo.com",
             "image_file": "logo_astemo.png",
-            "membership_level": 2
+            "membership_level": "Silver"
         },
         {
             "company_name": "BTicino de México",
@@ -46,7 +46,7 @@
             "phone_number": "+52 442 238 0400",
             "website_url": "https://www.bticino.com.mx",
             "image_file": "bticino-logo.svg",
-            "membership_level": 1
+            "membership_level": "Bronze"
         },
         {
             "company_name": "Nucitec",
@@ -54,7 +54,7 @@
             "phone_number": "+52 442 240 9496",
             "website_url": "https://www.nucitec.com",
             "image_file": "logo-nucitec.png",
-            "membership_level": 2
+            "membership_level": "Silver"
         },
         {
             "company_name": "Schneider Electric México",
@@ -62,7 +62,7 @@
             "phone_number": "+52 442 214 1259",
             "website_url": "https://www.se.com/mx",
             "image_file": "schneider_electric_logo.png",
-            "membership_level": 3
+            "membership_level": "Gold"
         },
         {
             "company_name": "Eaton Technologies",
@@ -70,7 +70,7 @@
             "phone_number": "+52 442 229 4900",
             "website_url": "https://www.eaton.com",
             "image_file": "eaton-logo.png",
-            "membership_level": 1
+            "membership_level": "Bronze"
         }
     ]
 }
