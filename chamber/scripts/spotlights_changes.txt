@@ -1,11 +1,11 @@
 // chamber/scripts/spotlights.js
 
 const spotlightContainer = document.querySelector('#spotlight-container');
-const dataUrl = 'data/members.json';
+const membersUrl = 'data/members.json'; // Renamed to avoid conflict with directory.js
 
 async function getSpotlights() {
     try {
-        const response = await fetch(dataUrl);
+        const response = await fetch(membersUrl);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
