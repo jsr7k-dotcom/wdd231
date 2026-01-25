@@ -1,54 +1,85 @@
-async function loadSpotlights() {
-    const response = await fetch("data/members.json");
-    const data = await response.json();
+// chamber/scripts/spotlights.js
 
-    const spotlightMembers = data.members.filter(m => m.membership ==="Gold");
+const spotlightContainer = document.querySelector('#spotlight-container');
+const membersUrl = 'data/members.json'; // Renamed to avoid conflict with directory.js
 
-    const selected = spotlightMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
+async function getSpotlights() {
+    try {
+        const response = await fetch(membersUrl);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        
+        // Filter for Gold members (Level 3)
+        // Note: Change to 'member.membership_level >= 2' to include Silver members if desired.
+        const goldMembers = data.companies.filter(member => member.membership_level === "Gold");
+        
+        // Randomly shuffle the array to pick random members
+        const shuffled = goldMembers.sort(() => 0.5 - Math.random());
+        
+        // Select the top 2 or 3 members from the shuffled list
+        // (Adjust the slice second argument to change the quantity)
+        const selected = shuffled.slice(0, 3);
+        
+        displaySpotlights(selected);
+    } catch (error) {
+        console.error('Error fetching spotlight data:', error);
+    }
+}
 
-    const container = document.querySelector("#spotlight-container");
+function displaySpotlights(members) {
+    // if (!spotlightContainer) return;
+    
+    spotlightContainer.innerHTML = ''; // Clear container
 
-    selected.forEach(member => {
-        const card = document.createElement("div");
-        card.classList.add("spotlight-card");
+    members.forEach(member => {
+        // Create card element
+        const card = document.createElement('div');
+        card.classList.add('spotlight-card');
+        
+        // Company Name
+        const name = document.createElement('h3');
+        name.textContent = member.company_name;
 
-        const tagline = generateTagline(member.main);
+        // Logo
+        const img = document.createElement('img');
+        img.src = `images/${member.image_file}`;
+        img.alt = `${member.company_name} Logo`;
+        img.loading = 'lazy';
+        img.width = 150;
+        img.height = "auto";
 
-        const email = member.name.toLowerCase().replace(/\s+/g, "") + "@gmail.com";
+        // Contact Info
+        const phone = document.createElement('p');
+        phone.textContent = member.phone_number;
 
-        card.innerHTML = `
-        <div class="spotlight-header">
-            <h3>${member.company_name}</h3>
-            <p class="spotlight-tagline">${tagline}</p>
-        </div>
+        const address = document.createElement('p');
+        address.textContent = member.company_address;
 
-        <div class="spotlight-divider"></div>
+        // Website Link
+        const link = document.createElement('a');
+        link.href = member.website_url;
+        link.target = '_blank';
+        link.textContent = 'Website';
 
-        <div class="spotlight-body">
-            <img src="images/${member.image}" alt=:${member.name} logo">
+        // Membership Level Label
+        const level = document.createElement('p');
+        level.textContent = 'Gold Member';
+        level.classList.add('membership-level');
 
-            <div class="spotlight-info">
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Phone:</strong> ${member.phone}</p>
-                <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
-            </div>
-        </div>
-        `;
+        // Append elements to card
+        card.appendChild(name);
+        card.appendChild(img);
+        card.appendChild(phone);
+        card.appendChild(address);
+        card.appendChild(link);
+        card.appendChild(level);
 
-        container.appendChild(card);
+        // Append card to container
+        spotlightContainer.appendChild(card);
     });
 }
 
-function generateTagline(name) {
-    const taglines = [
-        "Serving Querétaro with excellence",
-        "Your trusted local partner",
-        "Committed to community growth",
-        "Quality and service you can count on",
-        "Empowering local success"
-    ];
-
-    return taglines[Math.floor(Math.random() * taglines.length)];
-}
-
-loadSpotlights();
+// Initialize
+getSpotlights();

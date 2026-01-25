@@ -40,8 +40,8 @@ function displayCompanies (companies) {
         img.src = `images/${company.image_file}`;
         img.alt = `Logo of ${company.company_name}`;
         img.loading = 'lazy';
-        img.width = 200;
-        img.height = 150;
+        img.width = 150;
+        img.height = "auto";
 
         const name = document.createElement('h2');
         name.textContent = company.company_name;
