@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Querétaro Chamber of Commerce</title>
+    <meta name="description"
+        content="WDD 231 | José Roberto Hernández Peña | Home page for Chamber of Commerce in Querétaro, México">
+    <meta name="author" content="José Roberto Hernández Peña">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Querétaro Chamber of Commerce Home Page">
+    <meta property="og:description"
+        content="Explore the Querétaro Chamber of Commerce directory, showcasing local businesses and services in Santiago de Querétaro, México.">
+    <meta property="og:image" content="https://jsr7k-dotcom.github.io/wdd231/chamber/images/queretaro-chamber-logo.png">
+    <meta property="og:image:width" content="340">
+    <meta property="og:image:height" content="329">
+    <meta property="og:url" content="https://jsr7k-dotcom.github.io/wdd231/chamber/directory.html">
+    <link rel="icon" href="images/favicon-qro.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/forecast.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/queretaro-chamber-logo.png" alt="Querétaro Chamber of Commerce" width="512" height="512">
+        <span>Querétaro Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-btn" class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Join</h1>
+        <div class="form-and-cards">
+            <form action="thankyou.html" method="get" id="membership-form">
+                <fieldset>
+                    <legend>Membership Application</legend>
+
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" title="Enter your first name" autocomplete="given-name"
+                        required>
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" title="Enter your last name" autocomplete="family-name"
+                        required>
+
+                    <label for="title">Organizational Title</label>
+                    <input type="text" id="title" name="title" title="Enter your role or position"
+                        pattern="[A-Za-z\\-\\s]{7,}" autocomplete="organization-title" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" title="Enter a valid email address"
+                        placeholder="example@email.com" autocomplete="email" required>
+
+                    <label for="phone">Mobile Phone</label>
+                    <input type="tel" id="phone" name="phone" title="Enter your mobile phone number" autocomplete="tel"
+                        required>
+
+                    <label for="organization">Business / Organization Name</label>
+                    <input type="text" id="organization" name="organization"
+                        title="Enter your business or organization name" autocomplete="organization" required>
+
+                    <label for="membership">Membership Level</label>
+                    <select id="membership" name="membership" title="Select your membership level" required>
+                        <option value="" disabled selected>Select a level</option>
+                        <option value="np">Non-Profit</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+
+                    <label for="description">Business Description</label>
+                    <textarea name="description" id="description" title="Describe your business or organization"
+                        rows="5"></textarea>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <button type="submit">Apply Now</button>
+                </fieldset>
+            </form>
+
+            <section class="membership-cards">
+                <h2>Membership Levels</h2>
+
+                <div class="card">
+                    <h3>Non-Profit</h3>
+                    <p>Affordable membership for community organizations.</p>
+                    <button data-modal="np-modal">View Benefits</button>
+                </div>
+
+                <div class="card">
+                    <h3>Bronze</h3>
+                    <p>Great for small businesses starting to grow.</p>
+                    <button data-modal="bronze-modal">View Benefits</button>
+                </div>
+
+                <div class="card">
+                    <h3>Silver</h3>
+                    <p>Enhanced visibility and networking opportunities.</p>
+                    <button data-modal="silver-modal">View Benefits</button>
+                </div>
+
+                <div class="card">
+                    <h3>Gold</h3>
+                    <p>Maximum exposure and premium chamber benefits.</p>
+                    <button data-modal="gold-modal">View Benefits</button>
+                </div>
+            </section>
+        </div>
+
+        <dialog id="np-modal">
+            <h3>Non-Profit Membership Benefits</h3>
+            <ul>
+                <li>Discounted membership rate</li>
+                <li>Community event participation</li>
+                <li>Directory listing</li>
+                <li>Access to chamber workshops</li>
+            </ul>
+            <button class="close">Close</button>
+        </dialog>
+
+        <dialog id="bronze-modal">
+            <h3>Bronze Membership Benefits</h3>
+            <ul>
+                <li>Directory listing</li>
+                <li>Ribbon-cutting eligibility</li>
+                <li>Monthly newsletter features</li>
+                <li>Access to networking events</li>
+            </ul>
+            <button class="close">Close</button>
+        </dialog>
+
+        <dialog id="silver-modal">
+            <h3>Silver Membership Benefits</h3>
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Social media spotlights</li>
+                <li>Event sponsorship discounts</li>
+                <li>Priority booth placement</li>
+            </ul>
+            <button class="close">Close</button>
+        </dialog>
+
+        <dialog id="gold-modal">
+            <h3>Gold Membership Benefits</h3>
+            <ul>
+                <li>All silver benefits</li>
+                <li>Premium advertising placement</li>
+                <li>Free event sponsorships</li>
+                <li>Exclusive leadership luncheons</li>
+            </ul>
+            <button class="close">Close</button>
+        </dialog>
+    </main>
+    <footer>
+        <div>
+            <h2>Querétaro Chamber of Commerce</h2>
+            <p>Av. Luis Vega Monroy 405</p>
+            <p>Quinta Balaustradas</p>
+            <p>Querétaro, Qro. C.P. 76079</p>
+            <p>jhernandezpea@byupathway.edu</p>
+            <p>123-456-7890</p>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="16"
+                    height="16"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="16"
+                    height="16"></a>
+            <a href="https://github.com/" target="_blank"><img src="images/github.svg" alt="GitHub" width="16"
+                    height="16"></a>
+        </div>
+        <div>
+            <p>WDD 231</p>
+            <p>José Roberto Hernández Peña</p>
+            <p>© <span id="currentyear"></span> Querétaro Chamber of Commerce</p>
+            <p id="lastmodified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
