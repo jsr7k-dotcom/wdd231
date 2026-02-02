@@ -329,6 +329,25 @@ form button[type="submit"]:hover {
 .membership-cards .card {
     margin-bottom: 1.5rem;
     color: white;
+    opacity: 0; /* Start invisible for animation */
+    animation: fade-slide-up 0.8s ease-out forwards;
+}
+
+/* Stagger the animation for each card */
+.membership-cards .card:nth-child(1) { animation-delay: 0.2s; }
+.membership-cards .card:nth-child(2) { animation-delay: 0.4s; }
+.membership-cards .card:nth-child(3) { animation-delay: 0.6s; }
+.membership-cards .card:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fade-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /*---------------------Dialogs (Modals)--------------------------*/
