@@ -1,0 +1,692 @@
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: #06533c;
+    --accent: #459425;
+    --light: #EEEEEE;
+    --border: #CCCCCC;
+}
+
+/*---------------------Header--------------------------*/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 20px 0 20px 25px;
+    align-items: end;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+    background-color: var(--border);
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+/*---------------------Nav and Hamburger Dropdown--------------------------*/
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--primary);
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.8rem 10px;
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.navigation li.current {
+    background-color: var(--light);
+}
+
+.navigation a:hover {
+    background-color: var(--accent);
+    color: black;
+    font-weight: bolder;
+}
+
+/*---------------------Footer--------------------------*/
+footer {
+    background-color: var(--border);
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    min-height: 180px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: #ccc solid 1px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.social a:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+
+/*---------------------Main--------------------------*/
+h1{
+    border-bottom: 1px solid var(--border);
+    padding-left: 0.5rem;
+}
+.view-buttons {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.view-buttons button {
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: var(--light);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.view-buttons button:hover {
+    opacity: 0.9;
+}
+
+#cards {
+    padding: 1rem;
+}
+
+#cards.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#cards.list {
+    display: block;
+    padding: 1rem;
+}
+
+/* Updated selector to be more generic for reuse */
+.card {
+    background-color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    will-change: transform;
+}
+
+.card h2, .card h3 {
+    margin: 0.5rem 0;
+}
+
+.card p {
+    margin: 0.25rem 0;
+}
+
+.card p:last-of-type {
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+#cards.list .card {
+    border-left: 6px solid var(--primary);
+    border-top: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1rem;
+    text-align: left;
+    align-items: start;
+}
+
+.card:hover {
+    background-color: #4fa02f;
+    border: 2px solid #4fa02f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px) scale(1.02);
+    transition: all 0.2s ease;
+}
+
+#cards.list .card img {
+    margin: 0;
+}
+
+.card a {
+    display: inline-block;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    margin-top: 0.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card button:hover {
+    background-color: #043829;
+}
+
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+#cards.list .card a {
+    display: block;
+}
+
+/*---------------------Forms (Join Page)--------------------------*/
+form {
+    padding: 1rem;
+}
+
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 0;
+    background-color: white;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-top: 1.25rem;
+    color: var(--primary);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 1rem;
+    display: block;
+    background-color: #fcfcfc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--accent);
+}
+
+.membership-cards {
+    padding: 1rem;
+}
+
+.membership-cards h2 {
+    text-align: center;
+    border-bottom: none;
+}
+
+.membership-cards .card {
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+/*---------------------Dialogs (Modals)--------------------------*/
+dialog {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog h3 {
+    margin-top: 0;
+    color: var(--primary);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+dialog ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+dialog li {
+    margin-bottom: 0.5rem;
+}
+
+dialog button.close {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+}
+
+dialog button.close:hover {
+    background-color: var(--accent);
+}
+
+/*---------------------Thank You Page--------------------------*/
+.thankyou-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+#output {
+    text-align: left;
+    margin-top: 2rem;
+    background-color: var(--light);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+#output p {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/*---------------------Larger screen--------------------------*/
+@media (min-width: 38rem) {
+
+    header,
+    main,
+    nav,
+    footer {
+        margin: 0 auto;
+        padding: 5px;
+    }
+
+    header {
+        grid-template-columns: 24px auto;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+        border-bottom: 1px solid var(--light);
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navigation a {
+        border: none;
+    }
+
+    #cards.grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    #cards.list .card {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .card img {
+        max-height: 150px;
+    }
+
+    footer {
+        flex-direction: row;
+        padding: 1rem 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: left;
+        gap: 0;
+        min-height: 140px;
+    }
+
+    /* Hero adjustments */
+    .hero-content {
+        padding: 2.5rem;
+    }
+
+    /* Events grid */
+    .current-events {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .current-events h2 {
+        grid-column: span 3;
+        text-align: center;
+    }
+
+    .event-card {
+        margin-bottom: 0;
+        height: 100%;
+    }
+
+    /* Forecast horizontal */
+    .forecast-grid {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .forecast-day {
+        flex: 1;
+        margin: 0 0.5rem;
+    }
+
+    /* Join Page Grid Layout */
+    .form-and-cards {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: start;
+        padding: 0 1rem;
+    }
+
+    form {
+        padding: 0;
+    }
+
+    .membership-cards {
+        padding: 0;
+    }
+
+    .membership-cards .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/*---------------------Home Page Elements--------------------------*/
+/* Hero Section */
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 400px;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 85%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.hero-content h2 {
+    color: var(--primary);
+    margin-top: 0;
+    border-bottom: none;
+    font-size: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    background-color: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary);
+}
+
+/* Current Events */
+.current-events {
+    padding: 1rem;
+    background-color: var(--light);
+    margin: 2rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.event-card {
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.event-card:last-child {
+    margin-bottom: 0;
+}
+
+.event-card h3 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.event-date {
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+/* Weather Section */
+.weather {
+    text-align: center;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.weather-card {
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.weather-temp {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0.5rem 0;
+}
+
+.weather-desc {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#weather-icon {
+    width: 80px;
+    height: 80px;
+}
+
+/* Forecast Section */
+.forecast {
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.forecast-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.forecast-day {
+    background-color: var(--light);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    text-align: center;
+}
+
+.forecast-day h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary);
+    border-bottom: none;
+}
+
+/* Spotlights */
+#spotlight-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.spotlight-card {
+    background-color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    will-change: transform;
+}
+
+.spotlight-card img {
+    width: 25%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
