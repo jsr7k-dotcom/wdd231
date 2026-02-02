@@ -164,7 +164,8 @@ h1{
     padding: 1rem;
 }
 
-section.card {
+/* Updated selector to be more generic for reuse */
+.card {
     background-color: var(--accent);
     border: 2px solid var(--accent);
     padding: 1rem;
@@ -173,15 +174,15 @@ section.card {
     will-change: transform;
 }
 
-section.card h2 {
+.card h2, .card h3 {
     margin: 0.5rem 0;
 }
 
-section.card p {
+.card p {
     margin: 0.25rem 0;
 }
 
-section.card p:last-of-type {
+.card p:last-of-type {
     margin-top: 0.5rem;
     font-weight: 600;
 }
@@ -194,7 +195,7 @@ section.card p:last-of-type {
     margin-bottom: 0.5rem;
 }
 
-#cards.list section.card {
+#cards.list .card {
     border-left: 6px solid var(--primary);
     border-top: 1px solid var(--border);
     border-right: 1px solid var(--border);
@@ -208,7 +209,7 @@ section.card p:last-of-type {
     align-items: start;
 }
 
-section.card:hover {
+.card:hover {
     background-color: #4fa02f;
     border: 2px solid #4fa02f;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -216,11 +217,11 @@ section.card:hover {
     transition: all 0.2s ease;
 }
 
-#cards.list section.card img {
+#cards.list .card img {
     margin: 0;
 }
 
-section.card a {
+.card a {
     display: inline-block;
     max-width: 100%;
     word-break: break-word;
@@ -231,15 +232,177 @@ section.card a {
     font-weight: 600;
 }
 
+.card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-section.card a:hover {
+.card button:hover {
+    background-color: #043829;
+}
+
+
+.card a:hover {
     text-decoration: underline;
 }
 
-#cards.list section.card a {
+#cards.list .card a {
     display: block;
 }
 
+/*---------------------Forms (Join Page)--------------------------*/
+form {
+    padding: 1rem;
+}
+
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 0;
+    background-color: white;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-top: 1.25rem;
+    color: var(--primary);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 1rem;
+    display: block;
+    background-color: #fcfcfc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--accent);
+}
+
+.membership-cards {
+    padding: 1rem;
+}
+
+.membership-cards h2 {
+    text-align: center;
+    border-bottom: none;
+}
+
+.membership-cards .card {
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+/*---------------------Dialogs (Modals)--------------------------*/
+dialog {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog h3 {
+    margin-top: 0;
+    color: var(--primary);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+dialog ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+dialog li {
+    margin-bottom: 0.5rem;
+}
+
+dialog button.close {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+}
+
+dialog button.close:hover {
+    background-color: var(--accent);
+}
+
+/*---------------------Thank You Page--------------------------*/
+.thankyou-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+#output {
+    text-align: left;
+    margin-top: 2rem;
+    background-color: var(--light);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+#output p {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
 
 /*---------------------Larger screen--------------------------*/
 @media (min-width: 38rem) {
@@ -278,7 +441,7 @@ section.card a:hover {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-    #cards.list section.card {
+    #cards.list .card {
         grid-template-columns: 200px 1fr;
     }
 
@@ -287,15 +450,15 @@ section.card a:hover {
     }
 
     footer {
-    flex-direction: row;
-    padding: 1rem 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    text-align: left;
-    gap: 0;
-    min-height: 140px;
-}
+        flex-direction: row;
+        padding: 1rem 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: left;
+        gap: 0;
+        min-height: 140px;
+    }
 
     /* Hero adjustments */
     .hero-content {
@@ -329,9 +492,30 @@ section.card a:hover {
         flex: 1;
         margin: 0 0.5rem;
     }
-}
-/*---------------------Home Page Elements--------------------------*/
 
+    /* Join Page Grid Layout */
+    .form-and-cards {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: start;
+        padding: 0 1rem;
+    }
+
+    form {
+        padding: 0;
+    }
+
+    .membership-cards {
+        padding: 0;
+    }
+    
+    .membership-cards .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/*---------------------Home Page Elements--------------------------*/
 /* Hero Section */
 .hero {
     position: relative;
@@ -506,6 +690,3 @@ section.card a:hover {
     height: auto;
     margin-bottom: 0.5rem;
 }
-
-
-
