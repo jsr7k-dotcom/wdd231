@@ -1,66 +1,66 @@
 export const discoverItems = [
     {
-        title: "Bluffdale City Park",
-        image: "bluffdale-city-park-small.jpg",
-        address: "2400 14400 S, Bluffdale, UT 84065",
+        title: "Acueducto de Querétaro",
+        image: "Acueducto_de_Queretaro.webp",
+        address: "Calzada de los Arcos, Bosques del Acueducto, 76000 Santiago de Querétaro, Qro.",
         description:
-            "A central community park with sports fields, playgrounds, pavilions, and event space.",
-        url: "http://www.bluffdale.gov/"
+            "The iconic symbol of the city, this massive 18th-century aqueduct features 74 soaring pink stone arches stretching over a kilometer.",
+        url: "https://www.ciudadespatrimonio.mx/acueducto/"
     },
     {
-        title: "Wardle Fields Regional Park",
-        image: "wardle-small.jpg",
-        address: "14148 S 2700 W, Bluffdale, UT 84065",
+        title: "Plaza de Armas",
+        image: "Plaza_de_Armas.webp",
+        address: "Calle 5 de Mayo, Centro, 76000 Santiago de Querétaro, Qro.",
         description:
-            "A massive, modern 40‑acre park with splash pads, zip lines, pickleball courts, and huge playground structures.",
-        url: "https://slco.org/parks-recreation/parks-trails/all-parks/wardle-fields-regional-park/"
+            "The heart of the historic center, surrounded by colonial mansions and restaurants, featuring a famous statue of the Marquis of the Villa del Villar.",
+        url: "https://queretaro.travel/"
     },
     {
-        title: "Jordan River Parkway Trail",
-        image: "jrparkway-trail-small.jpg",
-        address: "1298 W 14600 S, Bluffdale, UT 84065",
+        title: "Cerro de las Campanas",
+        image: "Cerro_Campanas.webp",
+        address: "Cto. Cerro de las Campanas s/n, Centro Universitario, 76010 Santiago de Querétaro, Qro.",
         description:
-            "A scenic 40‑mile trail corridor running through Bluffdale, perfect for biking, walking, and wildlife viewing.",
-        url: "http://www.bluffdale.gov/314/Jordan-River-Parkway-Trail"
+            "A historic hill and national park where Emperor Maximilian was executed, offering panoramic views of the city and a museum.",
+        url: "https://sic.cultura.gob.mx/ficha.php?table=museo&table_id=26"
     },
     {
-        title: "Mountain Point Lake and Hot Springs",
-        image: "mountain-point.png",
-        address: "14557 S 790 W, Bluffdale, UT 84065",
+        title: "Peña de Bernal",
+        image: "Peña_de_Bernal.webp",
+        address: "Calle Corregidora, Centro, 76680 Bernal, Qro.",
         description:
-            "A natural hot spring pond and small lake used for recreation and relaxation.",
-        url: "https://mountainpointlake.com/"
+            "One of the world's tallest monoliths, located in the 'Magic Town' of Bernal just outside the city, perfect for hiking and climbing.",
+        url: "https://queretaro.travel/lugares/pena-de-bernal/"
     },
     {
-        title: "Bluffdale Rodeo Grounds",
-        image: "bluffdale-rodeo-small.jpg",
-        address: "2400 14400 S, Bluffdale, UT 84065",
+        title: "Templo de Santa Rosa de Viterbo",
+        image: "Santa_Rosa_del_Viterbo.webp",
+        address: "Calle José María Arteaga 89, Centro, 76000 Santiago de Querétaro, Qro.",
         description:
-            "A long‑standing community venue hosting rodeos, festivals, and Bluffdale Old West Days events.",
-        url: "https://www.bluffdale.gov/400/Bluffdale-OWD-Rodeo"
+            "A stunning baroque temple known for its intricate Moorish-influenced exterior buttresses and elaborate gold-leaf interior.",
+        url: "https://es.wikipedia.org/wiki/Templo_de_Santa_Rosa_de_Viterbo"
     },
     {
-        title: "Vintage Park",
-        image: "vintage-park-small.jpg",
-        address: "14160 Loumis Pkwy, Bluffdale, UT 84065",
+        title: "Jardín Zenea",
+        image: "Jardin_Zenea.webp",
+        address: "Calle 16 de Septiembre, Centro, 76000 Santiago de Querétaro, Qro.",
         description:
-            "A quiet neighborhood park with open lawns, playgrounds, and shaded seating — a local favorite for families.",
-        url: "https://www.bluffdale.com/"
+            "A lovely central plaza featuring a 19th-century gazebo, fountains, and vibrant local life, perfect for an evening stroll.",
+        url: "https://www.de-paseo.com/queretaro/item/jardin-zenea/"
     },
     {
-        title: "Independence Trail System",
-        image: "independence-trail-small.jpg",
-        address: "40.48, -111.91",
+        title: "Museo Regional de Querétaro",
+        image: "Museo_Regional_de_Querétaro.webp",
+        address: "Calle Corregidora 3 Sur, Centro, 76000 Santiago de Querétaro, Qro.",
         description:
-            "A network of paved and gravel trails connecting Bluffdale’s Independence community with parks and open spaces.",
-        url: "https://www.bluffdale.com/"
+            "Housed in a former Franciscan convent, this museum displays artifacts ranging from pre-Hispanic times to the Mexican Revolution.",
+        url: "https://lugares.inah.gob.mx/en/node/5165"
     },
     {
-        title: "Point of the Mountain Flight Park",
-        image: "flight-park-small.jpg",
-        address: "15299 Steep Mountain Dr, Draper, UT 84020",
+        title: "Teatro de la República",
+        image: "Teatro_de_la_Republica.webp",
+        address: "Calle Benito Juárez Nte. 22, Centro, 76000 Santiago de Querétaro, Qro.",
         description:
-            "One of the world’s premier paragliding and hang‑gliding sites, located on the Bluffdale/Draper border.",
-        url: "http://www.potmp.com/"
+            "A historic neoclassical theater where the Mexican Constitution of 1917 was signed, hosting cultural events and plays.",
+        url: "https://sic.cultura.gob.mx/ficha.php?table=teatro&table_id=457"
     }
 ];
