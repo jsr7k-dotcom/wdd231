@@ -1,11 +1,11 @@
 const messageArea = document.querySelector("#visitor-message");
 const lastVisit = Number(localStorage.getItem("lastVisit"));
 const now = Date.now();
-const msInDay = 1000 * 60 * 60 * 24;
 
 if (!lastVisit) {
-    messageArea.textContent = "Welcome! Let us know if you have any questions.";
+    messageArea.textContent = "Welcome! Let us know if you have questions."
 } else {
+    const msInDay = 1000 * 60 * 60 * 24;
     const daysBetween = Math.floor((now - lastVisit) / msInDay);
 
     if (daysBetween < 1) {
