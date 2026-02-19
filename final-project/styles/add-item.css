@@ -1,0 +1,81 @@
+.search-area {
+    margin: 2rem 0;
+    position: relative;
+}
+
+.search-input-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.results-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: var(--border-width) solid var(--color-muted-black);
+    z-index: 10;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    /* JS toggle */
+}
+
+.result-item {
+    padding: 1rem;
+    border-bottom: 2px solid #eee;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.result-item:hover {
+    background-color: var(--color-sky);
+}
+
+.result-thumb {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+.form-container {
+    background: var(--color-lavender);
+    padding: 1.5rem;
+    border: var(--border-width) solid var(--color-muted-black);
+    box-shadow: var(--box-shadow);
+    margin-top: 2rem;
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.mobile-add-btn {
+    transform: scale(1.1);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-cancel {
+    background: var(--color-pink);
+}
+
+.btn-flex {
+    flex: 1;
+}

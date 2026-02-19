@@ -1,0 +1,228 @@
+/* Page specific styles for Inventory */
+.inventory-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    /* align-items: start; Removed to ensure equal height */
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    border: var(--border-width) dashed var(--color-muted-black);
+    background: rgba(255, 255, 255, 0.5);
+    display: none;
+    /* Toggled via JS */
+}
+
+.freshness-bar-container {
+    width: 100%;
+    height: 12px;
+    border: 2px solid var(--color-muted-black);
+    background: #eee;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.freshness-bar {
+    height: 100%;
+    width: 100%;
+    border-right: 2px solid var(--color-muted-black);
+    transition: width 0.3s ease;
+}
+
+.status-safe {
+    background-color: var(--color-tea);
+}
+
+.status-caution {
+    background-color: var(--color-mustard);
+}
+
+.status-critical {
+    background-color: var(--color-red);
+}
+
+.status-expired {
+    background-color: var(--color-muted-black);
+}
+
+.text-safe {
+    color: var(--color-tea);
+}
+
+.text-caution {
+    color: var(--color-mustard);
+}
+
+.text-critical {
+    color: var(--color-red);
+}
+
+.text-expired {
+    color: var(--color-muted-black);
+}
+
+.item-card-content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.item-thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid var(--color-muted-black);
+    border-radius: 4px;
+    background-color: #ddd;
+}
+
+.category-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    background: var(--color-sky);
+    border: 2px solid var(--color-muted-black);
+    display: inline-block;
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+}
+
+/* Card Internal Elements */
+.item-checkbox {
+    transform: scale(1.5);
+    margin-right: 0.5rem;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-title {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.item-quantity {
+    font-size: 0.8rem;
+    color: var(--color-muted-black);
+}
+
+.item-meta {
+    text-align: right;
+}
+
+.days-left {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.expiry-date {
+    font-size: 0.7rem;
+    color: #666;
+}
+
+/* Dynamic Selection State */
+.card.selected {
+    border-color: var(--color-tangerine);
+    background-color: #fff8e1;
+}
+
+/* Controls */
+.controls-container {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sort-select {
+    border: 3px solid #1D1D1B;
+    padding: 0.5rem;
+    font-family: 'Archivo Black';
+}
+
+#multi-action-btn {
+    display: none;
+    background: var(--color-red);
+    color: white;
+    border: 3px solid #1D1D1B;
+    padding: 0.5rem 1rem;
+    font-family: 'Archivo Black';
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #1D1D1B;
+}
+
+/* Action Modal */
+#action-modal.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#action-modal .modal-content {
+    background: var(--color-seashell);
+    border: var(--border-width) solid var(--color-muted-black);
+    box-shadow: 8px 8px 0px var(--color-muted-black);
+    padding: 2rem;
+    max-width: 400px;
+    text-align: center;
+}
+
+#modal-quantity-group {
+    margin: 1rem 0;
+    display: none;
+}
+
+#modal-quantity-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#action-quantity {
+    width: 80px;
+    padding: 0.5rem;
+    border: var(--border-width) solid var(--color-muted-black);
+    text-align: center;
+    font-family: inherit;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+#btn-consumed {
+    background: var(--color-tea);
+    color: white;
+}
+
+#btn-waste {
+    background: var(--color-red);
+    color: white;
+}
+
+@media (min-width: 900px) {
+    .inventory-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .inventory-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

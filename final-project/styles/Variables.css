@@ -1,0 +1,29 @@
+:root {
+    /* Color Palette */
+    --color-muted-black: #1d1d1b;
+    --color-sky: #9ed6df;
+    --color-seashell: #eae4da;
+    --color-tangerine: #ed773c;
+    --color-mustard: #eac119;
+    --color-pink: #eaa7c7;
+    --color-red: #c63f3e;
+    --color-lavender: #808bc5;
+    --color-tea: #245e55;
+
+    /* Typography */
+    --font-family-primary: "Archivo Black", sans-serif;
+    --font-size-base: 16px;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+
+    /* Borders & Shadows */
+    --border-width: 3px;
+    --border-radius: 0px;
+    /* Sharp corners for brutalism */
+    --box-shadow: 4px 4px 0px var(--color-muted-black);
+
+    /* Global */
+    --bg-color: var(--color-seashell);
+    --text-color: var(--color-muted-black);
+}
