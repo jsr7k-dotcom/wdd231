@@ -4,7 +4,7 @@
  */
 
 // Spoonacular API Key
-const SPOONACULAR_API_KEY = '1dccfda90d7644ae80bc5934d3b91879';
+const SPOONACULAR_API_KEY = 'bc48a5f3deb54a4d8d0cb8643fd7912d';
 
 // Helper to map Spoonacular aisle to Fresko category
 function mapAisleToCategory(aisle) {
