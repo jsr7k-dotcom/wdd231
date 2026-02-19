@@ -20,7 +20,7 @@
     /* Borders & Shadows */
     --border-width: 3px;
     --border-radius: 0px;
-    /* Sharp corners for brutalism */
+    /* Sharp corners for brutalism aesthetic */
     --box-shadow: 4px 4px 0px var(--color-muted-black);
 
     /* Global */
