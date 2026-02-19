@@ -58,7 +58,7 @@ a {
     border-width: 0;
 }
 
-/* Cards (Neobrutalism Base) */
+/* Cards (Neobrutalism aesthetics Base) */
 .card {
     background: white;
     border: var(--border-width) solid var(--color-muted-black);
