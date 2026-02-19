@@ -1,162 +1,173 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Site Plan: Fresko</title>
-
     <meta name="author" content="José Roberto Hernández Peña">
-    <meta name="description" content="Site plan for Fresko, a tool to help families to keep their stored food as fresh as possible.">
-
+    <meta name="description"
+        content="Site plan for Fresko, a tool to help families to keep their stored food as fresh as possible.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/site-plan.css">
 </head>
-
 <body>
     <header>
-        <h1>Site Plan: Fresko</h1>
-        <p><strong>Name:</strong> José Roberto Hernández Peña</p>
-        <p><strong>Course:</strong> WDD231 / Web Frontend Development I</p>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="images/logo-fresko.png" alt="Fresko Logo" class="logo-img">
+                Site Plan
+            </div>
+        </div>
     </header>
-
-    <section>
-        <h2>Site Name</h2>
-        <p><strong>Fresko</strong></p>
-        <p>
-            I selected the name "Fresko" (a play on the word "Fresco" which means "Fresh" in Spanish) because the
-            primary goal of the application is to keep food fresh and reduce waste. It is short, easy to remember, and
-            feels modern and clean. It aligns with the concept of having a fresh perspective on home resource management
-            and self-reliance.
-        </p>
-    </section>
-
-    <section>
-        <h2>Site Purpose</h2>
-        <p>
-            The purpose of Fresko is to provide families and individuals with a digital stewardship tool to manage their
-            home food inventory. The site aims to promote self-reliance by helping users track expiration dates to
-            prevent food waste and save money.
-        </p>
-        <p>
-            The application will allow users to quickly scan or input groceries, visualize their pantry stock through a
-            color-coded "traffic light" system (Green, Yellow, Red), and provide immediate recipe suggestions for
-            ingredients that are about to spoil. It transforms the pantry from a storage space into an active resource.
-        </p>
-    </section>
-
-    <section>
-        <h2>Scenarios</h2>
-        <p>The following are questions that a typical user might ask when visiting the site:</p>
-        <ul>
-            <li>
-                <strong>Scenario 1:</strong> "I have a lot of cans and dry goods in the back of my pantry. How do I know
-                which ones need to be used first so I don't have to throw them away later?"
-            </li>
-            <li>
-                <strong>Scenario 2:</strong> "I have chicken and spinach in the fridge that expire tomorrow, but I don't
-                know what to make. What recipe can I cook right now using these ingredients?"
-            </li>
-            <li>
-                <strong>Scenario 3:</strong> "I want to be more self-reliant with my budget. How can I see exactly what
-                food I already have at home before I go shopping for more?"
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Color Scheme</h2>
-        <p>
-            The color palette is chosen to reflect freshness, nature, and urgency where needed. I will use a
-            high-contrast design to ensure accessibility.
-        </p>
-
-        <div class="color-palette">
-            <div class="color-swatch primary">
-                #2E7D32<br>Forest Green
+    <main class="container">
+        <section class="card">
+            <h2>Site Name</h2>
+            <p><strong>Fresko</strong></p>
+            <p>
+                I selected the name "Fresko" (a play on the word "Fresco" which means "Fresh" in Spanish) because the
+                primary goal of the application is to keep food fresh and reduce waste. It is short, easy to remember,
+                and
+                feels modern and clean. It aligns with the concept of having a fresh perspective on home resource
+                management
+                and self-reliance.
+            </p>
+        </section>
+        <section class="card">
+            <h2>Site Purpose</h2>
+            <p>
+                The purpose of Fresko is to provide families and individuals with a digital stewardship tool to manage
+                their
+                home food inventory. The site aims to promote self-reliance by helping users track expiration dates to
+                prevent food waste and save money.
+            </p>
+            <p>
+                The application will allow users to quickly scan or input groceries, visualize their pantry stock
+                through a
+                color-coded "traffic light" system (Green, Yellow, Red), and provide immediate recipe suggestions for
+                ingredients that are about to spoil. It transforms the pantry from a storage space into an active
+                resource.
+            </p>
+        </section>
+        <section class="card">
+            <h2>Scenarios</h2>
+            <p>The following are questions that a typical user might ask when visiting the site:</p>
+            <ul>
+                <li>
+                    <strong>Scenario 1:</strong> "I have a lot of cans and dry goods in the back of my pantry. How do I
+                    know
+                    which ones need to be used first so I don't have to throw them away later?"
+                </li>
+                <li>
+                    <strong>Scenario 2:</strong> "I have chicken and spinach in the fridge that expire tomorrow, but I
+                    don't
+                    know what to make. What recipe can I cook right now using these ingredients?"
+                </li>
+                <li>
+                    <strong>Scenario 3:</strong> "I want to be more self-reliant with my budget. How can I see exactly
+                    what
+                    food I already have at home before I go shopping for more?"
+                </li>
+            </ul>
+        </section>
+        <section class="card">
+            <h2>Color Scheme</h2>
+            <p>
+                The color palette is chosen to reflect a bold, Neobrutalist aesthetic. It uses high contrast borders,
+                vibrant accent colors, and a warm background to feel approachable yet striking.
+            </p>
+            <div class="color-palette">
+                <!-- Swatches based on variables.css -->
+                <div class="color-swatch swatch-muted-black">
+                    #1D1D1B<br>Muted Black
+                </div>
+                <div class="color-swatch swatch-seashell">
+                    #EAE4DA<br>Seashell (BG)
+                </div>
+                <div class="color-swatch swatch-tangerine">
+                    #ED773C<br>Tangerine
+                </div>
+                <div class="color-swatch swatch-mustard">
+                    #EAC119<br>Mustard
+                </div>
+                <div class="color-swatch swatch-pink">
+                    #EAA7C7<br>Pink
+                </div>
+                <div class="color-swatch swatch-red">
+                    #C63F3E<br>Red
+                </div>
+                <div class="color-swatch swatch-tea">
+                    #245E55<br>Tea
+                </div>
+                <div class="color-swatch swatch-sky">
+                    #9ED6DF<br>Sky
+                </div>
             </div>
-            <div class="color-swatch secondary">
-                #F5F5F5<br>Smoke White
+            <h3>Usage:</h3>
+            <ul>
+                <li><strong>Muted Black (#1D1D1B):</strong> Used for text, borders, and shadows to create the defined
+                    structure.</li>
+                <li><strong>Seashell (#EAE4DA):</strong> Used for the main background of the page.</li>
+                <li><strong>Tangerine (#ED773C):</strong> Used for primary buttons and accents.</li>
+                <li><strong>Mustard (#EAC119) & Tea (#245E55):</strong> Used for status indicators and variety.</li>
+            </ul>
+        </section>
+        <section class="card">
+            <h2>Typography</h2>
+            <h3>Headings: Archivo Black</h3>
+            <p>
+                I have chosen <strong>Archivo Black</strong> for headings. It is a heavyweight sans-serif font that
+                provides the bold, impactful look required for the Neobrutalist design.
+            </p>
+            <div class="font-example-heading font-archivo">
+                Example H1: Manage Your Pantry Efficiently
             </div>
-            <div class="color-swatch accent">
-                #D32F2F<br>Alert Red
+            <h3>Body Text: System Sans-Serif</h3>
+            <p>
+                I am using the system's default <strong>sans-serif</strong> font for body text to ensure maximum
+                legibility
+                and performance, keeping the interface clean and functional.
+            </p>
+            <div class="font-example-body font-sans">
+                <p>
+                    Example Body Text: Fresko helps you keep track of your groceries and their expiration dates, so you
+                    can
+                    reduce waste and save money. With a simple color-coded system, you'll always know what to use
+                    first.</p>
             </div>
-            <div class="color-swatch text">
-                #212121<br>Dark Grey
+        </section>
+        <section class="card">
+            <h2>Wireframes</h2>
+            <p>
+                Below are the wireframe sketches for the "Dashboard/Inventory" page. The design prioritizes clarity and
+                quick visual scanning.
+            </p>
+            <div class="wireframe-container">
+                <div class="wireframe-box mobile-box">
+                    <h3>Mobile View</h3>
+                    <img src="images/Wireframe-mobile.png" alt="Mobile Wireframe of Fresko App" class="wf-img">
+                    <p class="wf-desc">
+                        <strong>Mobile Layout:</strong> Focused on vertical scrolling. The "traffic light" color strip
+                        is
+                        prominent on the side of each card.
+                    </p>
+                </div>
+                <div class="wireframe-box desktop-box">
+                    <h3>Desktop / Tablet View</h3>
+                    <img src="images/Wireframe-desktop.png" alt="Desktop Wireframe of Fresko App" class="wf-img">
+                    <p class="wf-desc">
+                        <strong>Desktop Layout:</strong> Takes advantage of width to show a grid system.
+                    </p>
+                </div>
             </div>
-        </div>
-
-        <h3>Usage:</h3>
-        <ul>
-            <li><strong>Forest Green (#2E7D32):</strong> Used for the main header, primary buttons (like "Add Item"),
-                and "Safe" status indicators.</li>
-            <li><strong>Smoke White (#F5F5F5):</strong> Used for the main background of the page to reduce eye strain
-                compared to pure white.</li>
-            <li><strong>Alert Red (#D32F2F):</strong> Used strictly for critical notifications, delete buttons, and
-                items that expire in less than 3 days.</li>
-            <li><strong>Dark Grey (#212121):</strong> Used for all body text and headings to ensure high readability
-                contrast.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Typography</h2>
-
-        <h3>Headings: Roboto</h3>
-        <p>
-            I have chosen <strong>Roboto</strong> (Sans-Serif) for headings because it is bold, geometric, and very easy
-            to read on mobile screens. It gives the application a modern, structured feel.
-        </p>
-        <div class="font-example-heading">
-            Example H1: Manage Your Pantry Efficiently
-        </div>
-
-        <h3>Body Text: Open Sans</h3>
-        <p>
-            I have chosen <strong>Open Sans</strong> (Sans-Serif) for paragraphs, labels, and list items. It is a
-            "humanist" sans-serif, which makes it very friendly and legible for reading instructions or product
-            descriptions.
-        </p>
-        <div class="font-example-body">
-            Example p: This product will expire in 3 days. Please consider using it in a recipe soon to avoid waste.
-        </div>
-    </section>
-
-    <section>
-        <h2>Wireframes</h2>
-        <p>
-            Below are the wireframe sketches for the "Dashboard/Inventory" page. The design prioritizes clarity and
-            quick visual scanning.
-        </p>
-
-        <div class="wireframe-container">
-            <div class="wireframe-box mobile-box">
-                <h3>Mobile View</h3>
-                <img src="images/Wireframe-mobile.png" alt="Mobile Wireframe of Fresko App" class="wf-img">
-                <p class="wf-desc">
-                    <strong>Mobile Layout:</strong> Focused on vertical scrolling. The "traffic light" color strip is
-                    prominent on the right side of each card for quick scanning.
-                </p>
-            </div>
-
-            <div class="wireframe-box desktop-box">
-                <h3>Desktop / Tablet View</h3>
-                <img src="images/Wireframe-desktop.png" alt="Desktop Wireframe of Fresko App" class="wf-img">
-                <p class="wf-desc">
-                    <strong>Desktop Layout:</strong> Takes advantage of width to show a grid system, filters on the
-                    left, and recipe suggestions on the right.
-                </p>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
     <footer>
         <p>&copy; José Roberto Hernández Peña | Fresko Project | WDD231</p>
     </footer>
 </body>
-
 </html>

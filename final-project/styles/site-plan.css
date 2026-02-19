@@ -1,153 +1,118 @@
-:root {
-    /* Define the project colors here for reference */
-    --primary-color: #2E7D32;   /* Forest Green */
-    --secondary-color: #F5F5F5; /* Smoke White */
-    --accent-color: #D32F2F;    /* Alert Red */
-    --text-color: #212121;      /* Dark Grey */
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    color: #333;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    line-height: 1.6;
-    background-color: #fff;
-}
-
-/* Header Styles */
-header {
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 10px;
-    margin-bottom: 40px;
-}
-
-h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5rem;
-    color: var(--primary-color);
-}
-
-h2 {
-    font-family: 'Roboto', sans-serif;
-    color: var(--primary-color);
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-    margin-top: 40px;
-}
-
-h3 {
-    font-family: 'Roboto', sans-serif;
-    color: var(--text-color);
-    margin-bottom: 10px;
-}
-
-p {
-    margin-bottom: 15px;
-}
-
+@import 'variables.css';
+/* Site Plan Specific Styles */
 /* Color Palette Section */
 .color-palette {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    margin: 20px 0;
+    gap: 1rem;
+    margin: 2rem 0;
+    justify-content: center;
 }
-
 .color-swatch {
     width: 150px;
-    height: 100px;
-    border: 1px solid #ddd;
+    height: 150px;
+    border: var(--border-width) solid var(--color-muted-black);
+    box-shadow: var(--box-shadow);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    border-radius: 8px;
     text-align: center;
+    padding: 1rem;
+    font-family: var(--font-family-primary);
     font-size: 0.9rem;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
-
-/* Specific background colors for swatches */
-.color-swatch.primary { background-color: var(--primary-color); }
-.color-swatch.secondary { background-color: var(--secondary-color); color: #333; }
-.color-swatch.accent { background-color: var(--accent-color); }
-.color-swatch.text { background-color: var(--text-color); }
-
+.color-swatch:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--color-muted-black);
+}
 /* Typography Examples */
 .font-example-heading {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-    border-left: 5px solid var(--primary-color);
-    padding-left: 10px;
-    background-color: #f9f9f9;
-    padding: 10px;
+    font-size: var(--font-size-xl);
+    border-bottom: 2px solid var(--color-muted-black);
+    padding: 1rem 0;
+    margin: 1rem 0;
 }
-
 .font-example-body {
-    font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
-    border-left: 5px solid var(--text-color);
-    padding-left: 10px;
-    background-color: #f9f9f9;
-    padding: 10px;
+    border-bottom: 1px solid var(--color-muted-black);
+    padding: 1rem 0;
+    margin: 1rem 0;
+    line-height: 1.6;
 }
-
 /* Wireframes Section */
 .wireframe-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
 }
-
 .wireframe-box {
-    background-color: #fafafa;
-    border: 1px solid #eee;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+    background: white;
+    padding: 1rem;
+    border: var(--border-width) solid var(--color-muted-black);
+    box-shadow: var(--box-shadow);
 }
-
-.mobile-box {
-    flex: 1;
-    min-width: 300px;
-    max-width: 400px;
+.wireframe-box h3 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--color-muted-black);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
-
-.desktop-box {
-    flex: 2;
-    min-width: 500px;
-}
-
-/* Images Logic */
 .wf-img {
     width: 100%;
     height: auto;
+    border: 1px solid #ccc;
     display: block;
-    margin: 0 auto 15px auto;
-    border: 2px solid #333; /* Border to mimic device screen or sketch outline */
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
 }
-
 .wf-desc {
-    font-style: italic;
-    color: #666;
     font-size: 0.9rem;
-    margin-top: 15px;
+    color: var(--text-color);
 }
-
-/* Footer */
-footer {
-    margin-top: 60px;
-    border-top: 1px solid #ccc;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.8rem;
-    color: #777;
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .wireframe-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* Specific Swatch Colors */
+.swatch-muted-black {
+    background-color: #1D1D1B;
+    color: white;
+}
+.swatch-seashell {
+    background-color: #EAE4DA;
+    color: #1D1D1B;
+}
+.swatch-tangerine {
+    background-color: #ED773C;
+    color: #1D1D1B;
+}
+.swatch-mustard {
+    background-color: #EAC119;
+    color: #1D1D1B;
+}
+.swatch-pink {
+    background-color: #EAA7C7;
+    color: #1D1D1B;
+}
+.swatch-red {
+    background-color: #C63F3E;
+    color: white;
+}
+.swatch-tea {
+    background-color: #245E55;
+    color: white;
+}
+.swatch-sky {
+    background-color: #9ED6DF;
+    color: #1D1D1B;
+}
+/* Typography Specifics */
+.font-archivo {
+    font-family: 'Archivo Black', sans-serif;
+}
+.font-sans {
+    font-family: sans-serif;
 }
